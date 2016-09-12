@@ -95,6 +95,9 @@
                             <constraint firstAttribute="trailing" secondItem="PBT-yT-03k" secondAttribute="trailing" id="zLK-hE-PuD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="nMd-oS-eBJ" id="Z7Z-Ib-Gqn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
