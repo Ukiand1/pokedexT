@@ -30,6 +30,13 @@ class PokemonDetailVC: UIViewController {
         
         nameLbl.text = pokemon.name
         
+        let image = UIImage(named: "\(pokemon.pokedexId)")
+        
+        mainImage.image = image
+        currentEvoImg.image = image
+        pokedexLbl.text = "\(pokemon.pokedexId)"
+        
+        
         pokemon.downloadPokemonDetail {
             //Whatever we write will only be called after the network call is complete
             self.updateUI()
@@ -43,6 +50,7 @@ class PokemonDetailVC: UIViewController {
         defenseLbl.text = pokemon.defense
         heightLbl.text = pokemon.height
         weightLbl.text = pokemon.weight
+        typeLbl.text = pokemon.type
     }
 
     
