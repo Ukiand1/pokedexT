@@ -1,0 +1,6 @@
+framework module Pods_pokedexT {
+  umbrella header "Pods-pokedexT-umbrella.h"
+
+  export *
+  module * { export * }
+}

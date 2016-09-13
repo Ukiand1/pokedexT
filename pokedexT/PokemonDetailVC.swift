@@ -30,7 +30,19 @@ class PokemonDetailVC: UIViewController {
         
         nameLbl.text = pokemon.name
         
-
+        pokemon.downloadPokemonDetail {
+            //Whatever we write will only be called after the network call is complete
+            self.updateUI()
+            print("Did arrive here")
+            
+        }
+    }
+    
+    func updateUI(){
+        attackLbl.text = pokemon.attack
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        weightLbl.text = pokemon.weight
     }
 
     
@@ -39,14 +51,5 @@ class PokemonDetailVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
