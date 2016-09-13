@@ -136,6 +136,10 @@ class Pokemon {
                     if let name = types[0]["name"] {
                         
                         self._type = name.capitalized
+                        
+                    } else {
+                        
+                        self._type = ""
                     }
                     
                     if types.count > 1 {
@@ -148,9 +152,6 @@ class Pokemon {
                             }
                         }
                         
-                    } else {
-                        
-                        self._type = ""
                     }
                     
                 }
